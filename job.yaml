@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: kubespray
-        image: aliyun-va-hub.byted.org/bge/argocd-demo:1.0.0.5
+        image: lailemon/demo:demo
         command: ["ansible-inventory","--version"]
       restartPolicy: Never
   backoffLimit: 4
