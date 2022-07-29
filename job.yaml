@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kubespray
+spec:
+  template:
+    spec:
+      containers:
+      - name: kubespray
+        image: aliyun-va-hub.byted.org/bge/argocd-demo:1.0.0.5
+        command: ["ansible-inventory","--version"]
+      restartPolicy: Never
+  backoffLimit: 4
